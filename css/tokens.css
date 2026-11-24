@@ -1,0 +1,44 @@
+:root {
+  /* Brand colors */
+  --color-navy-900: #061a40;
+  --color-navy-700: #0b2a5b;
+  --color-royal-600: #1b4fd8;
+  --color-royal-500: #2f6bff;
+  --color-sky-100: #e8f0ff;
+  --color-sky-50: #f4f8ff;
+  --color-white: #ffffff;
+  --color-silver-300: #c9d3e3;
+  --color-silver-500: #8896ad;
+
+  /* Semantic colors */
+  --color-bg: var(--color-sky-50);
+  --color-surface: var(--color-white);
+  --color-text: var(--color-navy-700);
+  --color-text-muted: var(--color-silver-500);
+  --color-primary: var(--color-royal-600);
+  --color-primary-hover: var(--color-royal-500);
+  --color-border: var(--color-silver-300);
+
+  /* Typography */
+  --font-main: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  /* Shape and shadow */
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 8px 30px rgba(11, 42, 91, 0.08);
+
+  /* Layout */
+  --container-width: 1160px;
+}

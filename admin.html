@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>لوحة الإدارة | عيادة المالكي</title>
+  <link rel="icon" href="images/logo-icon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+
+    <!-- Login -->
+    <section id="login-view" class="admin-login card">
+      <img src="images/logo-icon.svg" alt="" width="64" height="64">
+      <h1>لوحة إدارة العيادة</h1>
+      <p>للعاملين في العيادة فقط.</p>
+      <form id="login-form" class="admin-form" novalidate>
+        <label for="login-email">البريد الإلكتروني</label>
+        <input id="login-email" name="email" type="email" autocomplete="username" dir="ltr">
+        <label for="login-password">كلمة المرور</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" dir="ltr">
+        <button class="btn" type="submit">تسجيل الدخول</button>
+        <p id="login-status" class="admin-status" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="app-view" hidden>
+      <header class="admin-bar">
+        <div>
+          <strong>لوحة الإدارة</strong>
+          <small id="admin-email" dir="ltr"></small>
+        </div>
+        <button id="logout-button" class="btn btn--ghost btn--small" type="button">خروج</button>
+      </header>
+
+      <div class="admin-tabs" role="tablist">
+        <button class="admin-tab" type="button" role="tab" data-tab="leads" aria-selected="true">
+          طلبات التواصل <span id="new-badge" class="badge" hidden></span>
+        </button>
+        <button class="admin-tab" type="button" role="tab" data-tab="members" aria-selected="false">
+          الأعضاء والنقاط
+        </button>
+      </div>
+
+      <section id="tab-leads">
+        <div class="admin-toolbar">
+          <button id="refresh-leads" class="btn btn--ghost btn--small" type="button">تحديث</button>
+          <span>يتحدث تلقائياً كل 30 ثانية</span>
+        </div>
+        <p id="leads-status" class="admin-status" role="status"></p>
+        <div id="leads-list" class="lead-list"></div>
+      </section>
+
+      <section id="tab-members" hidden>
+        <form id="member-search" class="admin-search" novalidate>
+          <label for="member-query">كود العضوية أو رقم الموبايل</label>
+          <div class="admin-search__row">
+            <input id="member-query" type="text" dir="ltr" autocomplete="off" placeholder="MK-A1B2C3 أو 01012345678">
+            <button class="btn" type="submit">بحث</button>
+          </div>
+        </form>
+        <p id="member-status" class="admin-status" role="status"></p>
+        <div id="member-result" class="member-card card" hidden></div>
+      </section>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
