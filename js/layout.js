@@ -71,7 +71,8 @@ function buildFooter() {
           <p><a href="privacy.html">سياسة الخصوصية</a></p>
         </div>
       </div>
-      <p class="site-footer__copy container">© ${year} ${CLINIC.nameAr}. جميع الحقوق محفوظة.</p>
+      <p class="site-footer__copy container">© ${year} ${CLINIC.nameAr}. 
+       prepared/ENG.Youssef Hossam جميع الحقوق محفوظة.</p>
     </footer>`;
 }
 
